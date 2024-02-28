@@ -1,0 +1,25 @@
+<!-- product-list.component.html -->
+<h1>Products</h1>
+
+<div *ngFor="let category of categories">
+  <h3>{{ category.type }}</h3>
+
+  <div *ngFor="let product of category.products">
+    <h4>
+      <a [title]="product.name + ' details'" [routerLink]="['/products', product.id]">
+        {{ product.name }}
+      </a>
+    </h4>
+    <span *ngFor="let image of product.images">
+        <img [src]="image.link" alt="{{ product.name }}" width="150">
+    </span> 
+    <p [style.color]="'red'">Price: {{ product.price }} ₸</p>    
+    <p *ngIf="product.description">
+      Description: {{ product.description }}
+    </p>
+    <p [style.color]="'red'">Rating: {{generateStars(product.rating)}}</p>
+    <button type="button" (click)="share(product.link)">Share</button><br>   
+
+    <app-product-alerts [category]="category" (notify)="onNotify()"></app-product-alerts>
+  </div>
+</div>
