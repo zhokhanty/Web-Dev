@@ -1,0 +1,18 @@
+h1 {
+    color: red
+}
+h2 {
+    color: blue;
+    font-weight: bold;
+}
+h3 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2em;
+    color: black;
+}
+img {
+    margin: 30px;
+}
+button {
+    margin-top: 10px;
+}
