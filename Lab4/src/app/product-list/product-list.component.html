@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <h2>Products</h2>
 
 <div *ngFor="let product of products">
@@ -12,4 +13,20 @@
 
   <button type="button" (click)="share(product.link)">Share</button>
   <app-product-alerts [product]="product" (notify)="onNotify()"></app-product-alerts>
+=======
+<h2>Products</h2>
+
+<div *ngFor="let product of products">
+  <h3>
+    <img [src]="product.link1" alt="{{ product.name }}" width="200"><br>
+    <a [title]="product.name + ' details'" [routerLink]="['/products', product.id]">
+      {{ product.name }}
+    </a>
+  </h3>
+  <h4 [style.color]="getRatingColor(product.rating)">Rating: {{ generateStars(product.rating) }}</h4>
+  <p *ngIf="product.description" style="width: 60%;">Description: {{ product.description }}</p>
+
+  <button type="button" (click)="share(product.link)">Share</button>
+  <app-product-alerts [product]="product" (notify)="onNotify()"></app-product-alerts>
+>>>>>>> 8e72d5cc64febcd492ec2484183a1735d0a146b8
 </div>
