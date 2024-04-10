@@ -31,5 +31,7 @@ class Vacancy(models.Model):
     def to_json(self):
         return {
             "name": self.name,
-            "salary": self.salary
+            "description": self.description,
+            "salary": self.salary,
+            "company": self.company.name
         }
