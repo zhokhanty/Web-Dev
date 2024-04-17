@@ -1,0 +1,11 @@
+<div class = "navbar">
+    <button (click) = "back()">Back</button>
+</div>
+
+<ul class="container">
+    <li *ngFor = "let c of companies" class="item">
+        <a [routerLink]="['/companies', c.id]">
+            <span class="item-text">{{c.name}}</span>
+        </a>
+    </li>
+</ul>

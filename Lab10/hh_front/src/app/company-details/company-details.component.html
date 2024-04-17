@@ -1,0 +1,21 @@
+<div class="navbar">
+    <button (click)="back()">Back</button>
+</div>
+<div class="container">
+    <h2>Company Details</h2>
+    <div *ngIf="company; else loading" class="box">
+        <p>Name: {{ company.name }}</p>
+        <p>Description: {{ company.description }}</p>
+        <p>City: {{ company.city }}</p>
+        <p>Address: {{ company.address }}</p>        
+    </div>
+    <h2>Vacancies</h2>
+    <div *ngFor="let v of vacancies" class="box">
+        <p>Name: {{ v.name }}</p>
+        <p>Salary: {{ v.salary }}</p>
+        <p>Description: {{ v.description }}</p> 
+    </div>
+</div>
+<ng-template #loading>
+    <p>Loading...</p>
+</ng-template>

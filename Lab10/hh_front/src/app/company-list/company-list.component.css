@@ -1,0 +1,19 @@
+.container {
+    list-style: none;
+    width: 70%;
+    margin: auto;
+    padding: 0;
+}
+.item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fafafa;
+    margin-bottom: 5px;
+    padding: 10px;
+    border-radius: 5px;
+}
+.item-text {
+    margin: 0;
+}
+  
