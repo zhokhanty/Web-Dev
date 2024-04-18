@@ -1,1 +1,15 @@
-<p>vacancy-details works!</p>
+<div class="navbar">
+    <button (click)="back()">Back</button>
+</div>
+<div class="container">
+    <h2>Vacancy Details</h2>
+    <div *ngIf="vacancy; else loading" class="box">
+        <p>Name: {{ vacancy.name }}</p>
+        <p>Description: {{ vacancy.description }}</p>
+        <p>Salary: {{ vacancy.salary }}</p>
+        <p>Company name: {{company.name}}</p>        
+    </div>
+</div>
+<ng-template #loading>
+    <p>Loading...</p>
+</ng-template>

@@ -1,8 +1,9 @@
 <div class = "navbar">
     <button (click) = "back()">Back</button>
 </div>
+
 <ul class="container">
-    <li *ngFor="let v of vacancies">
+    <li *ngFor="let v of vacancies" class="item">
         <a [routerLink]="['/vacancies', v.id]">
             <span class="item-text">{{v.name}}</span>
         </a>

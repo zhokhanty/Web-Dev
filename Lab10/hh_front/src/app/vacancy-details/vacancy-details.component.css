@@ -1,0 +1,25 @@
+.container {
+    width: 70%;
+    margin: auto;
+    padding: 0;
+}
+h2 {
+    color:black;
+}
+
+.box {
+    background-color: #e0e0e0;
+    margin-bottom: 5px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+p {
+    display: flex;
+    align-items: center;
+    background-color: #fafafa;
+    margin-bottom: 5px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
